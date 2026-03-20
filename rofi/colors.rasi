@@ -1,0 +1,8 @@
+* {
+    primary: #dfc56d;
+    secondary: #f0e2bb;
+    surface: #16130b;    
+    surface-variant: #4b4639;    
+    outline: #979080;    
+    background: #16130b;    
+}
