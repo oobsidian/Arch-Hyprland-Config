@@ -45,68 +45,88 @@ git clone https://github.com/kbyte75/Arch-Hyprland-Config.git && cd Arch-Hyprlan
 
 ## INSTALLATION
 
- 1. Update the system
- ```bash
- sudo pacman -Syu
- ```
+1.  Update the system
 
- 2. Install this dependencies
- ```bash
- sudo pacman -S --needed --noconfirm base-devel git rsync jq eog eza nano grim slurp shfmt imagemagick blueman nm-connection-editor python-pyquery adw-gtk-theme qt6-base starship xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
- ```
- 3. Install this packages
- ```bash
- sudo pacman -S --needed --noconfirm waybar swww rofi conky hyprlock hypridle matugen fish fastfetch kitty nautilus cliphist wl-clipboard mpv nwg-look font-manager
- ```
- 3. Setup `yay` package manager
- ```bash
- git clone https://aur.archlinux.org/yay.git
- cd yay
- makepkg -si --noconfirm
- ```
- 4. Change default shell to `fish` (optional)
- ```bash
- command -v fish &>/dev/null && sudo chsh -s /usr/bin/fish "$USER"
- ```
- 5. Install emoji keyboard (optional)
- ```bash
- yay -S hypremoji --needed --noconfirm
- ```
- 6. Install vscodium - code editor (optional) `*it's gonna take too much time`
- ```bash
- yay -S vscodium-bin --needed --noconfirm
- ```
- 7. Install Brave - Web Browser (optional) `Recommended`
- ```bash
- yay -S brave-bin --needed --noconfirm
- ```
- 8. `Clone config files (important)`
- ```bash
- cp -a ~/.config ~/.config.bak
- git clone https://github.com/kbyte75/Arch-Hyprland-Config.git
- cd Arch-Hyprland-Config
- cp -a .config ~/
- ```
-  9. Set permissions 
- ```bash
- sudo chmod +x ~/.config/hypr/scripts/*.sh 2>/dev/null || true
- sudo chmod +x ~/.config/waybar/scripts/*.{sh,py} 2>/dev/null || true
- ```
-  10. Download wallpapers (Optional)
- ```bash
- mkdir -p "$HOME/Pictures/Wallpapers"
- git clone https://github.com/kbyte75/wallpapers.git
- cd wallpapers
- mv * "$HOME/Pictures/Wallpapers"
- ```
-  11. Other tweaks (Optional)
- ```bash
- cd Arch-Hyprland-Config
- sudo rsync -a nanorc /etc
- sudo sed -i.bak 's/^timeout .*/timeout 1/' /boot/loader/loader.conf
- ```
+```bash
+sudo pacman -Syu
+```
 
+2.  Install this dependencies
 
+```bash
+sudo pacman -S --needed --noconfirm base-devel git rsync jq eog eza nano grim slurp shfmt imagemagick blueman nm-connection-editor python-pyquery adw-gtk-theme qt6-base starship xdg-desktop-portal-hyprland xdg-desktop-portal-gtk libnotify ttf-jetbrains-mono-nerd
+```
+
+3.  Install this packages
+
+```bash
+sudo pacman -S --needed --noconfirm waybar swww rofi conky hyprlock hypridle matugen fish fastfetch kitty nautilus cliphist wl-clipboard mpv nwg-look font-manager
+```
+
+3.  Setup `yay` package manager
+
+```bash
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+```
+
+4.  Change default shell to `fish` (optional)
+
+```bash
+command -v fish &>/dev/null && sudo chsh -s /usr/bin/fish "$USER"
+```
+
+5.  Install emoji keyboard (optional)
+
+```bash
+yay -S hypremoji --needed --noconfirm
+```
+
+6.  Install vscodium - code editor (optional) `*it's gonna take too much time`
+
+```bash
+yay -S vscodium-bin --needed --noconfirm
+```
+
+7.  Install Brave - Web Browser (optional) `Recommended`
+
+```bash
+yay -S brave-bin --needed --noconfirm
+```
+
+8.  `Clone config files (important)`
+
+```bash
+cp -a ~/.config ~/.config.bak
+git clone https://github.com/kbyte75/Arch-Hyprland-Config.git
+cd Arch-Hyprland-Config
+cp -a * ~/.config
+```
+
+9. Set permissions
+
+```bash
+sudo chmod +x ~/.config/hypr/scripts/*.sh 2>/dev/null || true
+sudo chmod +x ~/.config/waybar/scripts/*.{sh,py} 2>/dev/null || true
+```
+
+10. Download wallpapers (Optional)
+
+```bash
+mkdir -p "$HOME/Pictures/Wallpapers"
+git clone https://github.com/kbyte75/wallpapers.git
+cd wallpapers
+mv * "$HOME/Pictures/Wallpapers"
+```
+
+11. Other tweaks (Optional)
+
+```bash
+cd Arch-Hyprland-Config
+sudo rsync -a nanorc /etc
+sudo sed -i.bak 's/^timeout .*/timeout 0/' /boot/loader/loader.conf
+```
 
 ## After Reboot
 
@@ -116,7 +136,7 @@ git clone https://github.com/kbyte75/Arch-Hyprland-Config.git && cd Arch-Hyprlan
 - [MacTahoe Icon Theme](https://www.gnome-look.org/p/2299216)
 - [Rubik](https://fonts.google.com/selection?query=rubik)
 - [Poppins](https://fonts.google.com/selection?query=poppins)
-- [Poppins](https://fonts.google.com/specimen/Geist+Mono)
+- [Geist Mono](https://fonts.google.com/specimen/Geist+Mono)
 - [A Black Lives](https://www.dafont.com/a-black-lives.font)
 - [Voice In My Head](https://www.dafont.com/voice-in-my-head.font)
 - [FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip)

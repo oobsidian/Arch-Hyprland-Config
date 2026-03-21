@@ -4,6 +4,7 @@ eog
 font-manager
 fontconfig
 go
+htop
 gtk-3.0
 gtk-4.0
 Motrix
@@ -16,6 +17,7 @@ systemd
 VSCodium
 xsettingsd
 yay
+libvirt
 kactivitymanagerdrc
 mimeapps.list
 QtProject.conf
