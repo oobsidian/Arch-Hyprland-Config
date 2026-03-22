@@ -108,12 +108,23 @@ cd wallpapers
 mv * "$HOME/Pictures/Wallpapers"
 ```
 
-11. Other tweaks (Optional)
+11. Modify nano & reduce loading time (Optional)
 
 ```bash
 cd Arch-Hyprland-Config
 sudo rsync -a nanorc /etc
 sudo sed -i.bak 's/^timeout .*/timeout 0/' /boot/loader/loader.conf
+```
+
+11. Set default programmes (Optional)
+
+```bash
+xdg-settings set default-web-browser brave-browser.desktop
+xdg-mime default org.gnome.Nautilus.desktop inode/directory
+xdg-mime default org.gnome.eog.desktop image/jpeg
+xdg-mime default org.gnome.eog.desktop image/png
+xdg-mime default org.gnome.eog.desktop image/webp
+xdg-mime default org.gnome.eog.desktop image/gif
 ```
 
 ## After Reboot
