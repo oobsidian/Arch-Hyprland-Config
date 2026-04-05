@@ -30,6 +30,7 @@
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
+
 #power-menu,
 #custom-title,
 #custom-power {
@@ -37,14 +38,14 @@
   border-bottom-right-radius: 6px;
 }
 
-#custom-logo,
-#custom-separator,
 #network,
 #bluetooth,
+#custom-logo,
 #custom-power,
+#custom-title,
 #custom-reboot,
 #custom-logout,
-#custom-title,
+#custom-separator,
 #network.disconnected,
 #custom-picker:hover,
 #custom-clipboard:hover,
@@ -52,11 +53,11 @@
   background-color: alpha(@secondary, 0.3);
 }
 
-#custom-separator,
 #network,
-#custom-title,
-#custom-logo,
 #power-menu,
+#custom-logo,
+#custom-title,
+#custom-separator,
 #bluetooth {
   margin: 5px 0;
 }
@@ -118,9 +119,10 @@ tooltip label {
   color: #cad806;
 }
 /* =============================== MIDDLE SECTION =============================== */
+
 #workspaces {
   padding: 4px;
-  margin: 5px 20px;
+  margin: 5px 10px;
   border-radius: 8px;
   background-color: alpha(@outline, 0.5);
 }
@@ -144,9 +146,6 @@ tooltip label {
 /* =============================== RIGHT SECTION =============================== */
 #tray {
   margin-right: 12px;
-}
-#clock.day {
-  margin: 0 10px;
 }
 
 #custom-weather {

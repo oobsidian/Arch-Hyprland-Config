@@ -11,7 +11,7 @@ if pgrep -x rofi >/dev/null; then
 fi
 
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
-CACHE_DIR="$HOME/.cache/rofi-wallpapers"
+CACHE_DIR="$HOME/.cache/wallpapers"
 ROFI_THEME="$HOME/.config/rofi/wallpaper.rasi"
 WALLPAPER_SCRIPT="$HOME/.config/hypr/scripts/random_wallpaper.sh"
 THUMB_SIZE="400x400"

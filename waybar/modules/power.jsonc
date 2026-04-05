@@ -1,0 +1,34 @@
+{
+  "group/power-menu": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false,
+    },
+    "modules": ["custom/power", "custom/logout", "custom/reboot"],
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": true,
+    "on-click": "shutdown now",
+    "tooltip-format": "Shutdown",
+    "on-scroll-up": "$HOME/.config/waybar/scripts/volume.sh up",
+    "on-scroll-down": "$HOME/.config/waybar/scripts/volume.sh down",
+  },
+  "custom/logout": {
+    "format": "󰿅",
+    "tooltip": true,
+    "on-click": "loginctl kill-session $XDG_SESSION_ID",
+    "tooltip-format": "Logout",
+    "on-scroll-up": "$HOME/.config/waybar/scripts/volume.sh up",
+    "on-scroll-down": "$HOME/.config/waybar/scripts/volume.sh down",
+  },
+  "custom/reboot": {
+    "format": "󰑓",
+    "tooltip": true,
+    "on-click": "reboot",
+    "tooltip-format": "Reboot",
+    "on-scroll-up": "$HOME/.config/waybar/scripts/volume.sh up",
+    "on-scroll-down": "$HOME/.config/waybar/scripts/volume.sh down",
+  },
+}

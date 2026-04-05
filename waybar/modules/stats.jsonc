@@ -4,9 +4,9 @@
     "click-to-reveal": false,
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": true
+      "transition-left-to-right": true,
     },
-    "modules": ["custom/space", "disk"]
+    "modules": ["custom/space", "disk"],
   },
 
   "disk": {
@@ -14,10 +14,11 @@
     "interval": 30,
     "states": {
       "warning": 60,
-      "critical": 80
+      "critical": 80,
     },
     "format": "󰝰  {percentage_free}%",
-    "tooltip-format": "{free} / {total}"
+    "tooltip-format": "{free} / {total}",
+    "on-click": "nautilus",
     // "unit": "GB"
   },
 
@@ -25,7 +26,7 @@
     "format": " ",
     "tooltip": false,
     "on-scroll-up": "~/.config/waybar/scripts/volume.sh up",
-    "on-scroll-down": "~/.config/waybar/scripts/volume.sh down"
+    "on-scroll-down": "~/.config/waybar/scripts/volume.sh down",
   },
 
   "cpu": {
@@ -34,8 +35,8 @@
     "format": "  {usage}%",
     "states": {
       "warning": 60,
-      "critical": 80
-    }
+      "critical": 80,
+    },
   },
 
   "memory": {
@@ -44,8 +45,8 @@
     "tooltip-format": "{used:0.1f}GB / {total}GB",
     "states": {
       "warning": 60,
-      "critical": 80
-    }
+      "critical": 80,
+    },
   },
 
   "temperature": {
@@ -54,6 +55,6 @@
     "thermal-zone": 2,
     "critical-threshold": 70,
     "format": " {temperatureC}°C",
-    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input"
-  }
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+  },
 }

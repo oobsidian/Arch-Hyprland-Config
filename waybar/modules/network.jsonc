@@ -29,20 +29,9 @@
     "on-click": "hyprpicker",
   },
   // 󱉫
-  // DAY & TIME
-
   "clock": {
-    "format": "  {:%I:%M}",
-    "tooltip-format": "<span font_desc='JetBrains Mono 10'>{calendar}</span>",
-    "calendar": {
-      "mode": "month",
-      "format": {
-        "months": "<span font_desc='Poppins 10' weight='semibold'>{}</span>",
-        "weeks": "<span font_desc='JetBrains Mono 9' alpha='50%'>{}</span>",
-        "days": "<span>{}</span>",
-        "today": "<span weight='bold' background='#2a2f4a' foreground='#ffffff'>{}</span>",
-      },
-    },
+    "tooltip": false,
+    "format": " {:%I:%M}",
   },
 
   // BLUETOOTH ICON AND CONNECTED DEVICE
@@ -105,7 +94,6 @@
   },
 
   "network": {
-    "interface": "wlp48s0f4u2",
     "format": "󰤩 ",
     "format-wifi": " ",
     "format-icons": {
@@ -116,46 +104,12 @@
     "tooltip-format-wifi": "  {essid}  ({signalStrength}%)",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
     "tooltip-format-ethernet": "",
-    "format-disconnected": "󰤭 ", //An empty format will hide the module.
+    "format-disconnected": "󰤭 ",
     "tooltip-format-disconnected": "Disconnected",
     "tooltip": true,
     "on-click": "$HOME/.config/waybar/scripts/connection.sh wifi",
     "on-scroll-up": "$HOME/.config/waybar/scripts/volume.sh up",
     "on-scroll-down": "$HOME/.config/waybar/scripts/volume.sh down",
     "on-click-right": "nmcli radio wifi off && nmcli radio wifi on",
-  },
-
-  // POWER MENU
-  "group/power-menu": {
-    "orientation": "horizontal",
-    "drawer": {
-      "transition-duration": 500,
-      "transition-left-to-right": false,
-    },
-    "modules": ["custom/power", "custom/logout", "custom/reboot"],
-  },
-  "custom/power": {
-    "format": "",
-    "tooltip": true,
-    "on-click": "shutdown now",
-    "tooltip-format": "Shutdown",
-    "on-scroll-up": "$HOME/.config/waybar/scripts/volume.sh up",
-    "on-scroll-down": "$HOME/.config/waybar/scripts/volume.sh down",
-  },
-  "custom/logout": {
-    "format": "󰿅",
-    "tooltip": true,
-    "on-click": "loginctl kill-session $XDG_SESSION_ID",
-    "tooltip-format": "Logout",
-    "on-scroll-up": "$HOME/.config/waybar/scripts/volume.sh up",
-    "on-scroll-down": "$HOME/.config/waybar/scripts/volume.sh down",
-  },
-  "custom/reboot": {
-    "format": "󰑓",
-    "tooltip": true,
-    "on-click": "reboot",
-    "tooltip-format": "Reboot",
-    "on-scroll-up": "$HOME/.config/waybar/scripts/volume.sh up",
-    "on-scroll-down": "$HOME/.config/waybar/scripts/volume.sh down",
   },
 }
